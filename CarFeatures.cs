@@ -7,9 +7,10 @@ using System.Collections.Generic;
 using System.IO;
 
     class CarFeatures{
-        public string ?name,color;
-        public double HorsePower;
-        public short ReleaseDate;
+        public static short ValuesCars;
+        public static string ?name,color;
+        public static double HorsePower;
+        public static short ReleaseDate;
 
         public CarFeatures(string _name, string _color, double _HorsePower, short _ReleaseDate){
         System.Console.WriteLine("Car has been created");
@@ -20,6 +21,7 @@ using System.IO;
             color = _color;
             HorsePower = _HorsePower;
             ReleaseDate = _ReleaseDate;
+            ValuesCars++;
         }
         public void OutputFeatures(){
             System.Console.WriteLine("Car - " + name);
@@ -27,5 +29,7 @@ using System.IO;
             System.Console.WriteLine("Car have - " + HorsePower + " horsepower");
             System.Console.WriteLine("Car release date - " + ReleaseDate);
         }
-
+        public static void OutputValuesCars(){
+            System.Console.WriteLine(ValuesCars + " cars has been created!");
+        }
 }
