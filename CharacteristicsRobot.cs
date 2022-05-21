@@ -6,33 +6,26 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.IO;
 
-    class CharacteristicsRobot{
+    class CarFeatures{
+        public string ?name,color;
+        public double HorsePower;
+        public short ReleaseDate;
 
-        private string ?name;
-        private int weight;
-        private double[] ?coordinates;
-        
-
-        public CharacteristicsRobot(string _name, int _weight, double[] _coordinates){
-            System.Console.WriteLine("Object has been created");
-            getCharacteristics(_name,_weight,_coordinates);
+        public CarFeatures(string _name, string _color, double _HorsePower, short _ReleaseDate){
+        System.Console.WriteLine("Car has been created");
+        GetFeatures(_name,_color,_HorsePower,_ReleaseDate);
         }
-        public CharacteristicsRobot(){}
-        
-
-    public void getCharacteristics(string _name, int _weight, double[] _coordinates){
-        name = _name;
-        weight = _weight;
-        coordinates = _coordinates;
-    }
-
-    public void printCharacteristics(){
-        System.Console.WriteLine("Bot name is " + name);
-        System.Console.WriteLine("Bot weight is " + weight);
-        System.Console.WriteLine("Bot coodinates is");
-        foreach(double el in coordinates) 
-        System.Console.WriteLine(el);
-        
-    }
+        public void GetFeatures(string _name, string _color, double _HorsePower, short _ReleaseDate){
+            name = _name;
+            color = _color;
+            HorsePower = _HorsePower;
+            ReleaseDate = _ReleaseDate;
+        }
+        public void OutputFeatures(){
+            System.Console.WriteLine("Car - " + name);
+            System.Console.WriteLine("Car color - " + color);
+            System.Console.WriteLine("Car have - " + HorsePower + " horsepower");
+            System.Console.WriteLine("Car release date - " + ReleaseDate);
+        }
 
 }
