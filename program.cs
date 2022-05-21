@@ -14,7 +14,10 @@ class MyApplication
         
         CarFeatures SecondCar = new CarFeatures("Audi", "white edition", 433.8, 2021);
         SecondCar.OutputFeatures();
-         
 
+        CarFeatures ThirdCar = new CarFeatures("Lada", "cal edition", 0.1, 1945);
+        SecondCar.OutputFeatures();
+
+        CarFeatures.OutputValuesCars();
     }
 }
